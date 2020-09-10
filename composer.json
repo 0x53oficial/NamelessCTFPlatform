@@ -1,0 +1,22 @@
+{
+    "name": "nameless-ctfplatform",
+    "version": "1.0",
+
+    "require": {
+        "php":">= 7.0"
+    },
+
+    "authors": [
+        {
+            "name": "Samuel Silva",
+        }
+    ],
+
+    "autoload":{
+        "psr-4": {
+            "App\\": "App/",
+            "NCP\\": "vendor/NCP/"
+        }
+    }
+
+}
