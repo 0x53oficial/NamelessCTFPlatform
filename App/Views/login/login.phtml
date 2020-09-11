@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <title>0x53 | Nameless CTF Platform</title>
+        <link rel="icon" href="imgs/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Samuel Silva">
+        <meta name="creator" content="Samuel Silva">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/login.css" type="text/css">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <img src="imgs/namelessctfplatform.png" width="210">
+        </nav>
+        <!-- End of Navbar -->
+        <!-- Content-->
+
+        <div class="container-fluid mt-5">
+            <div class="row">
+                
+                <div class="col-md-6 well">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h5 class="card-title">Logue-se/Cadastre-se</h5>
+                        </div>
+                        <div class="card-body" align="center">
+                            
+
+                            <form method="POST" action="/login">
+                                <label>Usuário/E-mail</label>
+                                <input type="text" class="mb-3" placeholder="Digite seu usuário ou e-mail" required>
+                                
+                                <label>Senha</label>
+                                <input type="password" id="password" placeholder="Digite sua senha" required>
+                                <button id="buttonPassword" class="show-password mt-2 mb-4" type="button" onclick='showpassword()'><i class="far fa-eye"></i></button>
+
+                                <p>Esqueceu sua senha? <a href="/recuperar-senha">Clique aqui</a>.</p>
+                                <p>Deseja se cadastrar? <a href="/cadastro">Clique aqui</a>.</p>
+
+                            </form>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- End of Content -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <script src="js/password.js"></script>
+    </body>
+</html>
