@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class LoginController{
+class LoginController extends \NCP\Controllers\Action{
 
     public function login(){
-        echo 'login';
+        $this->render('login');
     }
 
 }

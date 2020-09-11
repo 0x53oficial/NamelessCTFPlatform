@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class IndexController{
+class IndexController extends \NCP\Controllers\Action{
 
    public function index(){
-       echo 'index';
+       $this->render('index');
    }
 
    public function ranking(){

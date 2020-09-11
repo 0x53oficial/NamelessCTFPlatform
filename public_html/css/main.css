@@ -1,0 +1,73 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis&display=swap';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Dosis";
+    font-size: 18px;
+    background-color: #2D2F39;
+    color: #fff;
+}
+
+h5{
+    font-weight: 600;
+}
+
+html{
+    padding-top: 50px;
+}
+
+.navbar{
+    background-color: #14151a;
+}
+
+#navbar-title:hover{
+    color: #e5e5e5;
+    transition-duration: 0.5s;
+}
+
+.nav-item{
+    transition-duration: 0.5s;
+}
+
+.card{
+    border-color: #1F2128;
+}
+
+.card-header{
+    background-color: #14151a;
+}
+
+.card-body{
+    background-color: #1F2128;
+    color: #fff;
+}
+
+.card-min{
+    min-height: 700px;
+}
+
+.table{
+    text-align: center;
+    color: #fff;
+}
+
+.table-dark{
+    background-color: #1F2128;   
+}
+
+.unfocus{
+    color: #cfcfcf;
+}
+
+.btn{
+    width: 100%;
+    height: 100px;
+}
+
+.solved{
+    background-color: #343f37;
+}
