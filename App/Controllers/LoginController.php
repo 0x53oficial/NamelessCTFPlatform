@@ -8,4 +8,12 @@ class LoginController extends \NCP\Controllers\Action{
         $this->render('login');
     }
 
+    public function cadastro(){
+        $this->render("cadastro");
+    }
+
+    public function recuperarSenha(){
+        $this->render("recuperarsenha");
+    }
+
 }

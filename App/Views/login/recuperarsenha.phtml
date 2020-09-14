@@ -24,23 +24,36 @@
                 <div class="col-md-6 well">
                     <div class="card mb-3">
                         <div class="card-header">
-                            <h5 class="card-title">Logue-se/Cadastre-se</h5>
+                            <h5 class="card-title">Recupere sua senha</h5>
                         </div>
                         <div class="card-body" align="center">
                             
+                            
+                            <?php
 
-                            <form method="POST" action="/login">
-                                <label>Usuário/E-mail</label>
-                                <input type="text" class="mb-3" placeholder="Digite seu usuário ou e-mail" required>
-                                
-                                <label>Senha</label>
-                                <input type="password" id="password" placeholder="Digite sua senha" required>
-                                <button id="buttonPassword" class="show-password mt-2 mb-3" type="button" onclick='showpassword()'><i class="far fa-eye"></i></button>
-                                <button class="btn btn-dark mb-4">Entrar</button>
-                                <p>Esqueceu sua senha? <a href="/recuperar-senha">Clique aqui</a>.</p>
-                                <p>Deseja se cadastrar? <a href="/cadastro">Clique aqui</a>.</p>
-
+                            /* if the param get key exists */
+                            
+                            if(isset($_GET['key'])){?>
+                            <form method="POST" action="/altera-senha">
+                                <label>Pronto Samuel, digite sua nova senha</label>
+                                <input id="password" type="password" class="mb-2" placeholder="Digite sua nova senha" required><br>
+                                <button id="buttonPassword" class="show-password mt-1 mb-2" type="button" onclick='showpassword()'><i class="far fa-eye"></i></button>
+                                <button class="btn btn-dark mb-3">Alterar</button>
                             </form>
+
+
+
+                            
+                            <?php } 
+                            /* if param get key not exists */ 
+                            else{ ?>
+                                <form method="POST" action="/recuperar-senha?key=1">
+                                    <label>Usuário/E-mail</label>
+                                    <input type="text" class="mb-4" placeholder="Digite seu usuário ou e-mail" required><br>
+                                    <button class="btn btn-dark mb-3">Recuperar</button>
+                                    <p>Deseja se cadastrar? <a href="/cadastro">Clique aqui</a>.</p>
+                                </form>
+                            <?php } ?>
 
 
                         </div>
