@@ -1,0 +1,102 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis&display=swap';
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    font-size: 0.9em;
+    line-height: 0.4cm;
+    color: #aaaaaa;
+}
+
+body{
+    font-family: "Dosis";
+    font-size: 18px;
+    background-color: #2D2F39;
+    color: #fff;
+}
+
+h5{
+    font-weight: 500;
+}
+
+html{
+    padding-top: 50px;
+}
+
+label{
+    display: block;
+
+}
+
+a{
+    color: #fff;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+input[type=text], input[type=password]{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    color: #fff;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+    width: 300px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.show-password{
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: rgb(187, 187, 187);
+    display: block;
+}
+
+.container-fluid{
+    position: relative;
+}
+
+.navbar{
+    background-color: #14151a;
+}
+
+#navbar-title:hover{
+    color: #e5e5e5;
+    transition-duration: 0.5s;
+}
+
+.nav-item{
+    transition-duration: 0.5s;
+}
+
+.card{
+    border-color: #1F2128;
+}
+
+.card-header{
+    background-color: #14151a;
+}
+
+.card-body{
+    background-color: #1F2128;
+    color: #fff;
+}
+
+.unfocus{
+    color: #cfcfcf;
+}
+
+.well {
+    position: absolute;
+    top: 10%;
+    right: 50%;
+    transform: translate(50%, 10%);
+ }
