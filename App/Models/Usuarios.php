@@ -4,10 +4,12 @@ namespace App\Models;
 
 class Usuarios extends \NCP\Models\Model{
 
+    private $id;
     private $usuario;
     private $senha;
     private $email;
     private $nome;
+    private $publico;
 
     /* Setters and Getters */
     public function setUsuario($usuario){
@@ -33,18 +35,23 @@ class Usuarios extends \NCP\Models\Model{
         $this->nome = preg_replace('/[^a-zA-Z ]/', '', strtolower($nome));
     }
 
+    public function setPublico(bool $publico){
+        $this->publico = $publico;
+    }
+
     public function __get($attr){
         return $this->$attr;
     }
 
 
     public function cadastrar(){
-        $query = 'INSERT INTO ncp_users(nome, usuario, senha, email) VALUES (:nome, :usuario, :senha, :email)';
+        $query = 'INSERT INTO ncp_users(nome, usuario, senha, email, publico) VALUES (:nome, :usuario, :senha, :email, :publico)';
         $stmt = $this->db->prepare($query);
         $stmt->bindValue(':nome', $this->__get('nome'));
         $stmt->bindValue(':usuario', $this->__get('usuario'));
         $stmt->bindValue(':senha', $this->__get('senha'));
         $stmt->bindValue(':email', $this->__get('email'));
+        $stmt->bindValue(':publico', 'true');
         $stmt->execute();
 
         return $this;
