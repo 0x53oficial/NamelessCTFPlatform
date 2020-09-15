@@ -42,6 +42,12 @@ class Router extends \NCP\Init\Bootstrap{
             'controller' => 'LoginController',
             'action' => 'cadastro'
         );
+
+        $routes['cadastrar'] = array(
+            'route' => '/cadastrar',
+            'controller' => 'LoginController',
+            'action' => 'cadastrar'
+        );
         
         $this->setRoutes($routes);
 

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -29,20 +30,32 @@
                         <div class="card-body" align="center">
                             
 
-                            <form method="POST" action="/cadastro">
+                            <form method="POST" action="/cadastrar">
+                                
+                                <label class="errors">
+                                    <?php
+                                        if(isset($_SESSION['errors'])){
+                                            for($i=0; $i < sizeof($_SESSION['errors']); $i++){
+                                                echo $_SESSION['errors'][$i];
+                                            }
+                                            unset($_SESSION['errors']);
+                                        }
+                                    ?>
+                                </label>
+
                                 <label>Nome e Sobrenome *</label>
-                                <input type="text" class="mb-3" placeholder="Digite seu nome." required>
+                                <input name="nome" type="text" class="mb-3" placeholder="Digite seu nome." required>
 
                                 <label>Endereço de E-mail *</label>
-                                <input type="text" class="mb-3" placeholder="Digite seu endereço de e-mail." required>
+                                <input name="email" type="email" class="mb-3" placeholder="Digite seu endereço de e-mail." required>
 
                                 <label>Usuário *</label>
-                                <input type="text" class="mb-3" placeholder="Digite seu endereço de e-mail." required>
+                                <input name="usuario" type="text" class="mb-3" placeholder="Digite seu usuário." required>
 
-                                <label>Senha</label>
-                                <input type="password" id="password" placeholder="Digite sua senha" required>
+                                <label>Senha *</label>
+                                <input name="senha" type="password" id="password" placeholder="Digite sua senha." required>
                                 <button id="buttonPassword" class="show-password mt-2 mb-3" type="button" onclick='showpassword()'><i class="far fa-eye"></i></button>
-                                <button class="btn btn-dark mb-4">Entrar</button>
+                                <button class="btn btn-dark mb-4">Cadastrar</button>
                                 <p>Já possui cadastro? <a href="/login">Clique aqui</a>.</p>
 
                             </form>

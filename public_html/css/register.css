@@ -40,7 +40,7 @@ a:hover{
     text-decoration: none;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=email]{
     background-color: transparent;
     border: 0;
     outline: none;
@@ -100,3 +100,7 @@ input[type=text], input[type=password]{
     right: 50%;
     transform: translate(50%, 10%);
  }
+
+.errors{
+    color: red;
+}
